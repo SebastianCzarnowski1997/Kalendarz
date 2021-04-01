@@ -69,11 +69,6 @@ class Currentdate {
             }
             calendarDays.appendChild(calendarDay);
         }
-        if (currentMonth === 0) {
-            const calendarDaysDiv = [...document.querySelectorAll(".days>div")];
-            calendarDaysDiv[dayOfDate].style.backgroundColor = "#D9843B";
-            calendarDaysDiv[dayOfDate].style.opacity = "0.6";
-        }
     }
 
     addNewEvent(date) {
