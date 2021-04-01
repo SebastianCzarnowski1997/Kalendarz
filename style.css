@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #262626;
+    box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+}
+
+.month {
+    width: 100%;
+    height: 20%;
+    background-color: #D9D9D9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    text-align: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.month i {
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.month h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-bottom: 1rem;
+    color: #A64E5E;
+}
+
+.month p {
+    font-size: 1.6rem;
+    color: #A64E5E;
+}
+
+.containerweekdays {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.weekdays {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.weekdays div {
+    font-size: 1.5rem;
+    height: 100%;
+    font-weight: 400;
+    width: 14.28%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+
+}
+
+.containerdays {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+
+.days {
+
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: 90%;
+
+}
+
+.days>div {
+
+
+    position: relative;
+    font-size: 1.4rem;
+    height: 5rem;
+    width: 14.28%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    transition: background-color 0.2s;
+
+}
+
+.days>div div.event {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    text-align: center;
+    font-size: .6rem;
+    position: absolute;
+    top: 50%;
+    padding: 2px 4px;
+    color: black;
+    border: 2px solid white;
+    border-radius: 5%;
+    background-color: #D9D9D9;
+    color: #262626;
+}
+
+.changeColor {
+
+    opacity: 0;
+
+
+}
+
+.todaysday {
+    background-color: green;
+}
+
+.days>div:hover {
+    background-color: #D9D9D9;
+    /* border: 0.2rem solid #777; */
+    cursor: pointer;
+}
+
+/* .prev-date,
+.next-date {
+    opacity: 0.5;
+} */
+
+.today {
+    background-color: #167e56;
+}
+
+.newidea {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #D9704A;
+    width: 30%;
+    height: 40%;
+    display: none;
+
+}
+
+.newidea input {
+    width: 80%;
+    text-align: center;
+    height: 20%;
+    margin: 10%;
+    border: 2px solid black;
+}
+
+.newidea button {
+    font-weight: 600;
+    width: 80%;
+    margin: 2%;
+    height: 10%;
+    border: 2px solid black;
+}
+
+.newidea button:hover {
+    cursor: pointer;
+}
+
+.newidea h2 {
+    color: black;
+}
+
+.newidea p {
+    color: black;
+    font-weight: 600;
+}
+
+@media(max-width: 500px) {
+    .month h1 {
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        margin-bottom: 1rem;
+        color: #A64E5E;
+    }
+
+    .month p {
+        font-size: 1rem;
+        color: #A64E5E;
+    }
+
+    .weekdays div {
+        font-size: 1rem;
+
+    }
+
+    .days>div {
+        font-size: 1rem;
+    }
+
+    .newidea {
+        width: 90%;
+        height: 50%;
+    }
+
+}
+
+@media(max-width: 812px) and (orientation: landscape) {
+    body {
+        height: 100vh;
+    }
+
+    .month h1 {
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        margin-bottom: 1rem;
+        color: #A64E5E;
+    }
+
+    .month p {
+        font-size: 1rem;
+        color: #A64E5E;
+    }
+
+    .weekdays div {
+        font-size: 1rem;
+
+    }
+
+    .days>div {
+        font-size: 1rem;
+    }
+
+    .newidea {
+        width: 90%;
+        height: 50%;
+    }
+
+    .containerdays {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 70%;
+
+    }
+
+    .days>div {
+        font-size: 1rem;
+        height: 3rem;
+    }
+
+    .newidea {
+        width: 50%;
+        height: 70%;
+    }
+
+}
